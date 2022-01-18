@@ -33,18 +33,18 @@ train_labels = np.delete(train_labels, [0])
 test_array = np.delete(test_array, 0, 0)
 test_labels = np.delete(test_labels, [0])
 
-# print(train_array)
-# print(train_labels)
-# print(test_array)
-# print(test_labels)
-#
-# sys.exit()
-#
-# train_array = train_array / -1
-# test_array = test_array / -1
-#
-# print(len(train_array))
-# print(len(train_labels))
+print(train_array)
+print(train_labels)
+print(test_array)
+print(test_labels)
+
+sys.exit()
+
+train_array = train_array / -1
+test_array = test_array / -1
+
+print(len(train_array))
+print(len(train_labels))
 
 model = keras.Sequential([
     keras.layers.Dense(128, activation=tf.nn.relu),
